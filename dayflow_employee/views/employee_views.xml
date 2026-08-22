@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id="view_dayflow_employee_tree"
+            model="ir.ui.view">
+
+        <field name="name">dayflow.employee.tree</field>
+
+        <field name="model">hr.employee</field>
+
+        <field name="arch" type="xml">
+
+            <list string="Employees">
+
+                <field name="dayflow_employee_id"/>
+                <field name="name"/>
+                <field name="job_title"/>
+                <field name="work_email"/>
+                <field name="personal_phone"/>
+                <field name="joining_date"/>
+                <field name="employee_status"/>
+
+            </list>
+
+        </field>
+
+    </record>
+
+
+    <record id="view_dayflow_employee_form"
+            model="ir.ui.view">
+
+        <field name="name">dayflow.employee.form</field>
+
+        <field name="model">hr.employee</field>
+
+        <field name="arch" type="xml">
+
+            <form string="Employee">
+
+                <sheet>
+
+                    <group>
+
+                        <group>
+
+                            <field name="profile_picture"
+                                   widget="image"
+                                   class="oe_avatar"/>
+
+                        </group>
+
+                    </group>
+
+                    <notebook>
+
+                        <page string="Personal Information">
+
+                            <group>
+
+                                <field name="dayflow_employee_id"
+                                       readonly="1"/>
+
+                                <field name="name"/>
+
+                                <field name="date_of_birth"/>
+
+                                <field name="gender"/>
+
+                                <field name="personal_email"/>
+
+                                <field name="personal_phone"/>
+
+                            </group>
+
+                            <separator string="Address"/>
+
+                            <group>
+
+                                <field name="address_line"/>
+
+                                <field name="city"/>
+
+                                <field name="state_name"/>
+
+                                <field name="country_name"/>
+
+                                <field name="postal_code"/>
+
+                            </group>
+
+                        </page>
+
+
+                        <page string="Job Information">
+
+                            <group>
+
+                                <field name="job_title"/>
+
+                                <field name="department_id"/>
+
+                                <field name="job_id"/>
+
+                                <field name="joining_date"/>
+
+                                <field name="employment_type"/>
+
+                                <field name="employee_status"/>
+
+                            </group>
+
+                        </page>
+
+
+                        <page string="Salary">
+
+                            <group>
+
+                                <field name="basic_salary"/>
+
+                                <field name="allowance"/>
+
+                                <field name="deduction"/>
+
+                                <field name="net_salary"
+                                       readonly="1"/>
+
+                            </group>
+
+                        </page>
+
+
+                        <page string="Documents">
+
+                            <group>
+
+                                <field name="document_name"/>
+
+                                <field name="document_number"/>
+
+                                <field name="document_file"
+                                       filename="document_filename"/>
+
+                                <field name="document_filename"
+                                       invisible="1"/>
+
+                            </group>
+
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+
+            </form>
+
+        </field>
+
+    </record>
+
+
+    <record id="action_dayflow_employee"
+            model="ir.actions.act_window">
+
+        <field name="name">Employees</field>
+
+        <field name="res_model">hr.employee</field>
+
+        <field name="view_mode">list,form</field>
+
+    </record>
+
+</odoo>
