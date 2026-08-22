@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id="view_dayflow_attendance_tree"
+            model="ir.ui.view">
+
+        <field name="name">dayflow.attendance.tree</field>
+
+        <field name="model">dayflow.attendance</field>
+
+        <field name="arch" type="xml">
+
+            <list string="Attendance">
+
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="attendance_date"/>
+                <field name="check_in"/>
+                <field name="check_out"/>
+                <field name="worked_hours"/>
+                <field name="status"/>
+
+            </list>
+
+        </field>
+
+    </record>
+
+
+    <record id="view_dayflow_attendance_form"
+            model="ir.ui.view">
+
+        <field name="name">dayflow.attendance.form</field>
+
+        <field name="model">dayflow.attendance</field>
+
+        <field name="arch" type="xml">
+
+            <form string="Attendance">
+
+                <header>
+
+                    <button
+                        name="action_check_in"
+                        string="Check In"
+                        type="object"
+                        class="btn-primary"
+                        invisible="check_in"
+                    />
+
+                    <button
+                        name="action_check_out"
+                        string="Check Out"
+                        type="object"
+                        class="btn-primary"
+                        invisible="not check_in or check_out"
+                    />
+
+                    <button
+                        name="action_present"
+                        string="Present"
+                        type="object"
+                    />
+
+                    <button
+                        name="action_absent"
+                        string="Absent"
+                        type="object"
+                    />
+
+                    <button
+                        name="action_half_day"
+                        string="Half-day"
+                        type="object"
+                    />
+
+                    <button
+                        name="action_leave"
+                        string="Leave"
+                        type="object"
+                    />
+
+                </header>
+
+                <sheet>
+
+                    <group>
+
+                        <field name="name"
+                               readonly="1"/>
+
+                        <field name="employee_id"/>
+
+                        <field name="attendance_date"/>
+
+                        <field name="status"/>
+
+                        <field name="check_in"/>
+
+                        <field name="check_out"/>
+
+                        <field name="worked_hours"
+                               readonly="1"/>
+
+                        <field name="remarks"/>
+
+                    </group>
+
+                </sheet>
+
+            </form>
+
+        </field>
+
+    </record>
+
+
+    <record id="view_dayflow_attendance_search"
+            model="ir.ui.view">
+
+        <field name="name">dayflow.attendance.search</field>
+
+        <field name="model">dayflow.attendance</field>
+
+        <field name="arch" type="xml">
+
+            <search>
+
+                <field name="employee_id"/>
+                <field name="attendance_date"/>
+                <field name="status"/>
+
+                <filter
+                    name="present"
+                    string="Present"
+                    domain="[('status','=','present')]"
+                />
+
+                <filter
+                    name="absent"
+                    string="Absent"
+                    domain="[('status','=','absent')]"
+                />
+
+                <filter
+                    name="half_day"
+                    string="Half-day"
+                    domain="[('status','=','half_day')]"
+                />
+
+                <filter
+                    name="leave"
+                    string="Leave"
+                    domain="[('status','=','leave')]"
+                />
+
+                <group expand="0"
+                       string="Group By">
+
+                    <filter
+                        name="employee"
+                        string="Employee"
+                        context="{'group_by':'employee_id'}"
+                    />
+
+                    <filter
+                        name="date"
+                        string="Date"
+                        context="{'group_by':'attendance_date'}"
+                    />
+
+                    <filter
+                        name="status"
+                        string="Status"
+                        context="{'group_by':'status'}"
+                    />
+
+                </group>
+
+            </search>
+
+        </field>
+
+    </record>
+
+
+    <record id="action_dayflow_attendance"
+            model="ir.actions.act_window">
+
+        <field name="name">Attendance</field>
+
+        <field name="res_model">dayflow.attendance</field>
+
+        <field name="view_mode">list,form</field>
+
+    </record>
+
+</odoo>
