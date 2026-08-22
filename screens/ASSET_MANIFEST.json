@@ -1,0 +1,25 @@
+{
+  "package": "Dayflow HRMS UI/UX Package",
+  "version": "1.0",
+  "screens": [
+    "01-sign-in.html",
+    "02-sign-up.html",
+    "03-employee-dashboard.html",
+    "04-admin-dashboard.html",
+    "05-profile.html",
+    "06-attendance.html",
+    "07-apply-leave.html",
+    "08-leave-approvals.html",
+    "09-payroll.html",
+    "10-employees.html",
+    "11-reports.html",
+    "12-documents.html"
+  ],
+  "asset_folders": [
+    "assets/logos",
+    "assets/icons",
+    "assets/illustrations",
+    "assets/backgrounds"
+  ],
+  "design_system": "design-system/README.md"
+}
