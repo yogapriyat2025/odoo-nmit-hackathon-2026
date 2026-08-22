@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id="dayflow_dashboard_main"
+            model="dayflow.dashboard">
+
+        <field name="name">Dayflow HR Dashboard</field>
+
+        <field name="description">
+            Human Resource Management System Dashboard
+        </field>
+
+    </record>
+
+</odoo>

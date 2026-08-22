@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dayflow_dashboard_employee,dayflow.dashboard.employee,model_dayflow_dashboard,dayflow_core.group_dayflow_employee,1,0,0,0
+access_dayflow_dashboard_hr,dayflow.dashboard.hr,model_dayflow_dashboard,dayflow_core.group_dayflow_hr,1,1,1,1
