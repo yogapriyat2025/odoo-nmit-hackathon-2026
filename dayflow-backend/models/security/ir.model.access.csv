@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dayflow_employee_user,dayflow.employee.user,model_dayflow_employee,base.group_user,1,1,1,0
+access_dayflow_attendance_user,dayflow.attendance.user,model_dayflow_attendance,base.group_user,1,1,1,0
+access_dayflow_leave_user,dayflow.leave.user,model_dayflow_leave,base.group_user,1,1,1,0
+access_dayflow_payroll_user,dayflow.payroll.user,model_dayflow_payroll,base.group_user,1,1,1,0
