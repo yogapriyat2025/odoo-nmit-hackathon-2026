@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <menuitem
+        id="menu_dayflow_employee"
+        name="Employees"
+        parent="dayflow_core.menu_dayflow_root"
+        sequence="20"
+    />
+
+    <menuitem
+        id="menu_dayflow_employee_list"
+        name="Employee Directory"
+        parent="menu_dayflow_employee"
+        action="action_dayflow_employee"
+        sequence="10"
+    />
+
+</odoo>
