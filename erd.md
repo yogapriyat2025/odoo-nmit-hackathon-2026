@@ -1,0 +1,15 @@
+# Dayflow HRMS ERD
+
+EMPLOYEES
+- has many ATTENDANCE records
+- has many LEAVE_REQUESTS
+- has many PAYROLL records
+- has many DOCUMENTS
+- has many NOTIFICATIONS
+
+Relationship:
+EMPLOYEES 1 ---- * ATTENDANCE
+EMPLOYEES 1 ---- * LEAVE_REQUESTS
+EMPLOYEES 1 ---- * PAYROLL
+EMPLOYEES 1 ---- * DOCUMENTS
+EMPLOYEES 1 ---- * NOTIFICATIONS
