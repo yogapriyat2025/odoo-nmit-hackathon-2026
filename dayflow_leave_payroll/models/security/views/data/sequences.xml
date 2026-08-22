@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id="seq_dayflow_leave"
+            model="ir.sequence">
+
+        <field name="name">
+            Dayflow Leave
+        </field>
+
+        <field name="code">
+            dayflow.leave
+        </field>
+
+        <field name="prefix">
+            LV/
+        </field>
+
+        <field name="padding">
+            4
+        </field>
+
+    </record>
+
+
+    <record id="seq_dayflow_payroll"
+            model="ir.sequence">
+
+        <field name="name">
+            Dayflow Payroll
+        </field>
+
+        <field name="code">
+            dayflow.payroll
+        </field>
+
+        <field name="prefix">
+            PAY/
+        </field>
+
+        <field name="padding">
+            4
+        </field>
+
+    </record>
+
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <!-- LEAVE -->
+
+    <menuitem
+        id="menu_dayflow_leave"
+        name="Leave"
+        parent="dayflow_core.menu_dayflow_root"
+        sequence="40"
+    />
+
+    <menuitem
+        id="menu_dayflow_leave_requests"
+        name="Leave Requests"
+        parent="menu_dayflow_leave"
+        action="action_dayflow_leave"
+        sequence="10"
+    />
+
+
+    <!-- PAYROLL -->
+
+    <menuitem
+        id="menu_dayflow_payroll"
+        name="Payroll"
+        parent="dayflow_core.menu_dayflow_root"
+        sequence="50"
+    />
+
+    <menuitem
+        id="menu_dayflow_payroll_records"
+        name="Payroll Records"
+        parent="menu_dayflow_payroll"
+        action="action_dayflow_payroll"
+        sequence="10"
+    />
+
+</odoo>
